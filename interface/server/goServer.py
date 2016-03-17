@@ -73,7 +73,8 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         line = self.rfile.readline()
         remainbytes -= len(line)
         try:
-            out = open(fn, 'wb')
+            # out = open(fn, 'wb')
+            out = open("AlphaGo-vs-Lee-Sedol-20160310.sgf", 'wb')
         except IOError:
             return (False, "Can't create file to write, do you have permission to write?")
 
